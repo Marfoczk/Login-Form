@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    /*Photo by Startup Stock Photos from Pexels*/
+    background: url(bg.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,.8);
+    width: 400px;
+    padding: 60px 40px;
+    border-radius: 7px;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(47,47,47,1);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(47,47,47,1);
+    box-shadow: 0px 2px 5px 0px rgba(47,47,47,1);
+
+}
+
+.container h1 {
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    padding: 0 0 30px;
+
+}
+
+.container .box {
+    position: relative;
+}
+
+.container .box input {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 0;
+    color: white;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+}
+
+.container .box label {
+    top: 0;
+    left: 0;
+    position: absolute;
+    font-size: 18px;
+    padding: 10px 0;
+    color: white;
+    transition: .5s;
+    pointer-events: none;
+}
+
+.container .box input:focus ~ label,
+.container .box input:valid ~ label {
+    top: -17px;
+    left: 0;
+    color: rgba(255, 255, 255, .5);
+    font-size: 12px;
+}
+
+/* submit button */
+
+.container input[type="submit"] {
+    padding: 10px 20px;
+    margin: 30px auto 0 auto;
+    background-color: rgb(185, 131, 87);;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+}
+
+
+ /* edytowanie autofilla */
+  @-webkit-keyframes autofill {
+    to {
+      color: white;
+      background: transparent;
+      font-size: 16px;
+    }
+  }
+  
+  input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+  }
